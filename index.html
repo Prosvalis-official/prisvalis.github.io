@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // 將目前的路徑與查詢字串一併轉導至 www.jw-albert.tw
+      const target = 'https://www.jw-albert.tw' + window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a id="redirectLink" href="#">new location</a>...</p>
+    <script>
+      document.getElementById('redirectLink').href = target;
+    </script>
+  </body>
+</html>
